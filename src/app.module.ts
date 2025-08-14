@@ -13,7 +13,6 @@ import { getMongoConfig } from './config/mongo.config';
 @Module({
   imports: [
     ConfigModule.forRoot(),
-    // MongooseModule.forRoot('mongodb://localhost:27017/top_api'),
     MongooseModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
