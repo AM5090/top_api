@@ -26,4 +26,10 @@ export class ReviewService {
       .find({ productId: new MSchema.Types.ObjectId(productId) })
       .exec();
   }
+
+  async deleteByProductId(productId: string) {
+    return this.reviewModel
+      .deleteMany({ productId: new MSchema.Types.ObjectId(productId) })
+      .exec();
+  }
 }
